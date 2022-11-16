@@ -24,5 +24,20 @@ namespace Wpf_Palashicheva_PR7
         {
             InitializeComponent();
         }
+
+        private void b11_Click(object sender, RoutedEventArgs e)
+        {
+            tabcontrol.SelectedIndex++;
+        }
+
+        private void b12_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

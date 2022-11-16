@@ -7,22 +7,109 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="800" MinHeight="300" MinWidth="800">
     <Grid>
-        <TabControl FontSize="16">
-            <TabItem Header="1">
+        <TabControl FontSize="16" x:Name="tabcontrol">
+            <TabItem x:Name ="q1" Header="1">
                 <TabItem.Content>
                     <StackPanel Margin="10,20,0,0">
-                        <TextBlock>1/10. Основные компоненты вычислительной системы:</TextBlock>
+                        <TextBlock x:Name="tb1">1/10. Основные компоненты вычислительной системы:</TextBlock>
                         <RadioButton x:Name="r11">Процессор, звуковая карта, видеокарта, монитор, клавиатура</RadioButton>
                         <RadioButton x:Name="r12">монитор, клавиатура, материнская плата, процессор</RadioButton>
                         <RadioButton x:Name="r13">процессор, ОП, внешняя память, монитор, клавиатура</RadioButton>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
-                            <Button x:Name="b11" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" />
-                            <Button x:Name="b12" Content ="Выход" Width="383" Height="30"/>
+                            <Button x:Name="b11" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" Click="b11_Click"/>
+                            <Button x:Name="b12" Content ="Выход" Width="383" Height="30" Click="b12_Click"/>
                         </StackPanel>
                     </StackPanel>
                 </TabItem.Content>
             </TabItem>
-            <TabItem Header="2">Вторая вкладка</TabItem>
+            <TabItem Header="2" >
+                <TabItem.Content>        
+                    <StackPanel Margin="10,20,0,0">
+                        <TextBlock x:Name="tb2">Web-страницы имеют расширение:</TextBlock>
+                        <RadioButton x:Name="r21">.txt</RadioButton>
+                        <RadioButton x:Name="r22">.bmp</RadioButton>
+                        <RadioButton x:Name="r23">.html</RadioButton>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
+                            <Button x:Name="b21" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" Click="b11_Click"/>
+                            <Button x:Name="b22" Content ="Выход" Width="383" Height="30"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="3">
+                <TabItem.Content>
+                    <StackPanel Margin="10,20,0,0">
+                        <TextBlock x:Name="tb3">Архивация файлов – это…</TextBlock>
+                        <RadioButton x:Name="r31">Объединение нескольких файлов</RadioButton>
+                        <RadioButton x:Name="r32">Разметка дисков на сектора и дорожки</RadioButton>
+                        <RadioButton x:Name="r33">Сжатие файлов</RadioButton>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
+                            <Button x:Name="b31" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" Click="b11_Click"/>
+                            <Button x:Name="b32" Content ="Выход" Width="383" Height="30"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Header="4">
+                <TabItem.Content>
+                    <StackPanel Margin="10,20,0,0">
+                        <TextBlock x:Name="tb4">Какая из программ является антивирусной программой?</TextBlock>
+                        <RadioButton x:Name="r41">NDD</RadioButton>
+                        <RadioButton x:Name="r42">DRWEB</RadioButton>
+                        <RadioButton x:Name="r43">RAR</RadioButton>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
+                            <Button x:Name="b41" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" Click="b11_Click"/>
+                            <Button x:Name="b42" Content ="Выход" Width="383" Height="30"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Header="5">
+                <TabItem.Content>
+                    <StackPanel Margin="10,20,0,0">
+                        <TextBlock x:Name="tb5">Какая из программ не является утилитой для роботы с диском?</TextBlock>
+                        <RadioButton x:Name="r51">NDD</RadioButton>
+                        <RadioButton x:Name="r52">FORMAT</RadioButton>
+                        <RadioButton x:Name="r53">Excel</RadioButton>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
+                            <Button x:Name="b51" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" Click="b11_Click"/>
+                            <Button x:Name="b52" Content ="Выход" Width="383" Height="30"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Header="6">
+                <TabItem.Content>
+                    <StackPanel Margin="10,20,0,0">
+                        <TextBlock x:Name="tb6">Что такое кластер на магнитном диске?</TextBlock>
+                        <RadioButton x:Name="r61">конверт для диска</RadioButton>
+                        <RadioButton x:Name="r62">единица дискового пространства</RadioButton>
+                        <RadioButton x:Name="r63">виртуальный диск</RadioButton>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
+                            <Button x:Name="b61" Content ="Следующий вопрос" Margin="0,0,40,0" Width="332" Height="30" Click="b11_Click"/>
+                            <Button x:Name="b62" Content ="Выход" Width="383" Height="30"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="rez">
+                <TabItem.Content>
+                    <StackPanel Margin="10,20,0,0">
+                        <TextBlock>Тестирование завершенно</TextBlock>
+                        <TextBlock x:Name="rezOc"/>
+                        <TextBlock x:Name="pravOtv"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="129">
+                            <Button x:Name="Refresh" Content ="Начать сначала" Margin="0,0,40,0" Width="332" Height="30" Click="Refresh_Click"/>
+                            <Button x:Name="exit" Content ="Выход" Width="383" Height="30" Click="b12_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
         </TabControl>
     </Grid>
 </Window>
